@@ -1,6 +1,7 @@
 import React, {useEffect, useState} from 'react';
 import axios from "axios";
 import {Link, useNavigate} from "react-router-dom";
+import { motion } from 'framer-motion';
 
 function Home() {
 
@@ -28,9 +29,21 @@ function Home() {
     }
 
     return (
-        <div className='d-flex flex-column justify-content-center align-items-center bg-light vh-100'>
+        <motion.div
+            className='d-flex flex-column justify-content-center align-items-center bg-light vh-100'
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+            transition={{ duration: 0.5 }}
+        >
             <h1>List of Users</h1>
-            <div className='w-75 rounded bg-white border shadow p-4'>
+            <motion.div
+                className='w-75 rounded bg-white border shadow p-4'
+                initial={{ opacity: 0, y: 100 }}
+                animate={{ opacity: 1, y: 0 }}
+                exit={{ opacity: 0, y: -100 }}
+                transition={{ duration: 0.5 }}
+            >
                 <div className='d-flex justify-content-end'>
                     <Link to='/user/create' className='btn btn-success'>ADD</Link>
                 </div>
@@ -58,8 +71,8 @@ function Home() {
                         ))}
                     </tbody>
                 </table>
-            </div>
-        </div>
+            </motion.div>
+        </motion.div>
     );
 }
 

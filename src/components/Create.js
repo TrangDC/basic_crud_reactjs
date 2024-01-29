@@ -1,6 +1,7 @@
 import React, {useState} from 'react';
 import {Link, useNavigate} from "react-router-dom";
 import axios from "axios";
+import { motion } from 'framer-motion';
 
 function Create() {
 
@@ -23,7 +24,13 @@ function Create() {
     }
 
     return (
-        <div className='d-flex w-100 vh-100 justify-content-center align-items-center'>
+        <motion.div
+            className='d-flex w-100 vh-100 justify-content-center align-items-center'
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+            transition={{ duration: 0.5 }}
+        >
             <div className='w-50 border bg-secondary text-white p-5'>
                 <form onSubmit={handleSubmit}>
                     <h2>Add a user</h2>
@@ -32,7 +39,7 @@ function Create() {
                         <input type="text" name='name' className='form-control'
                                onChange={event =>
                                    setValues({...values, [event.target.name]: event.target.value})
-                                }/>
+                               }/>
                     </div>
                     <div>
                         <label htmlFor="email">Email:</label>
@@ -45,8 +52,8 @@ function Create() {
                         <label htmlFor="phone">Phone:</label>
                         <input type="number" name='phone' className='form-control'
                                onChange={event =>
-                            setValues({...values, [event.target.name]: event.target.value})
-                        }/>
+                                   setValues({...values, [event.target.name]: event.target.value})
+                               }/>
                     </div>
                     <br/>
                     <button className='btn btn-info'>Submit</button>
@@ -55,7 +62,7 @@ function Create() {
                     </div>
                 </form>
             </div>
-        </div>
+        </motion.div>
     );
 }
 

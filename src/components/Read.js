@@ -1,6 +1,8 @@
 import React, {useEffect, useState} from 'react';
 import axios from "axios";
 import {Link, useParams} from "react-router-dom";
+import { motion } from 'framer-motion';
+
 
 
 function Read() {
@@ -21,12 +23,6 @@ function Read() {
         };
 
         fetchData();
-        // axios.get('http://localhost:3000/users/' + id)
-        //     .then(res => {
-        //         console.log(res);
-        //         setUser(res.data);
-        //     })
-        //     .catch(err => console.error(err))
     }, [id])
 
     const handleDeleteArticle = (articleId) => {
@@ -42,7 +38,13 @@ function Read() {
     }
 
     return (
-        <div className='d-flex flex-column align-items-center'>
+        <motion.div
+            className='d-flex flex-column align-items-center'
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+            transition={{ duration: 0.5 }}
+        >
             <div className='w-50 border bg-secondary text-white p-5 mb-4'>
                 <h3>User Detail</h3>
                 <div className=' text-white'>
@@ -83,7 +85,7 @@ function Read() {
                     </tbody>
                 </table>
             </div>
-        </div>
+        </motion.div>
     );
 }
 

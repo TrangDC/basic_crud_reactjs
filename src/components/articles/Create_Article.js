@@ -1,6 +1,8 @@
 import React, {useState} from 'react';
 import {Link, useNavigate, useParams} from "react-router-dom";
 import axios from "axios";
+import { motion } from 'framer-motion';
+
 
 function Create_Article() {
 
@@ -29,7 +31,13 @@ function Create_Article() {
     }
 
     return (
-        <div className='d-flex w-100 vh-100 justify-content-center align-items-center'>
+        <motion.div
+            className='d-flex w-100 vh-100 justify-content-center align-items-center'
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+            transition={{ duration: 0.5 }}
+        >
             <div className='w-50 border bg-secondary text-white p-5'>
                 <form onSubmit={handleSubmit}>
                     <h2>Add an article</h2>
@@ -46,7 +54,7 @@ function Create_Article() {
                     </div>
                 </form>
             </div>
-        </div>
+        </motion.div>
     );
 }
 
