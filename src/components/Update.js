@@ -34,7 +34,7 @@ function Update() {
         axios.put('http://localhost:3000/users/' + id, user)
             .then(res => {
                 console.log(res);
-                navigate("/")
+                navigate("/user")
             })
             .catch(err => console.log(err))
     }

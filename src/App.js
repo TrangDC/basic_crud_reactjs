@@ -22,9 +22,9 @@ function App() {
             <Route path='/user/update/:id' element={<Update/>}></Route>
             <Route path='/user/:id' element={<Read/>}></Route>
 
-            <Route path='/user/:user_id/add-article' element={<Create_Article />}></Route>
-            <Route path='/user/:user_id/view-article/:article_id' element={<Read_Article />}></Route>
-            <Route path='/user/:user_id/edit-article/:article_id' element={<Update_Article />}></Route>
+            <Route path='/user/:id/add-article' element={<Create_Article />}></Route>
+            <Route path='/user/:id/view-article/:article_id' element={<Read_Article />}></Route>
+            <Route path='/user/:id/edit-article/:article_id' element={<Update_Article />}></Route>
           </Routes>
         </BrowserRouter>
     </div>

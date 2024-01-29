@@ -17,7 +17,7 @@ function Create() {
         axios.post('http://localhost:3000/users', values)
             .then(res => {
                 console.log(res);
-                navigate("/")
+                navigate("/user")
             })
             .catch(err => console.log(err))
     }

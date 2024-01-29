@@ -30,10 +30,22 @@
     },
     {
       "id": "5",
-      "name": "Emma Brown",
+      "name": "Emma Brown updated",
       "username": "emma_brown",
       "email": "emma@example.com",
       "phone": "1112223333"
+    },
+    {
+      "id": "0b61",
+      "name": "Đinh Công Tráng",
+      "email": "dinhcongtrang99@gmail.com",
+      "phone": "0968949246"
+    },
+    {
+      "id": "d159",
+      "name": "TDC99123",
+      "email": "trangdinhcongtmqt@gmail.com",
+      "phone": "0582786384"
     }
   ],
   "articles": [
@@ -51,27 +63,44 @@
     },
     {
       "id": "3",
+      "user_id": 1,
+      "title": "Second Article",
+      "content": "Content of the first article."
+    },
+    {
+      "id": "4",
+      "user_id": 1,
+      "title": "Second Article",
+      "content": "Content of the first article."
+    },
+    {
+      "id": "6",
       "user_id": 2,
       "title": "Third Article",
       "content": "Content of the third article."
     },
     {
-      "id": "4",
+      "id": "7",
       "user_id": 3,
       "title": "Fourth Article",
       "content": "Content of the fourth article."
     },
     {
-      "id": "5",
+      "id": "8",
       "user_id": 3,
       "title": "Fifth Article",
       "content": "Content of the fifth article."
     },
     {
-      "id": "6",
+      "id": "9",
       "user_id": 4,
       "title": "Sixth Article",
       "content": "Content of the sixth article."
+    },
+    {
+      "id": "727a",
+      "title": "Blog đầu tiên",
+      "user_id": "1"
     }
   ]
 }
