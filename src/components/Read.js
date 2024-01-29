@@ -45,9 +45,9 @@ function Read() {
             exit={{ opacity: 0 }}
             transition={{ duration: 0.5 }}
         >
-            <div className='w-50 border bg-secondary text-white p-5 mb-4'>
+            <div className='w-50 border bg-light text-dark p-5 mb-4'>
                 <h3>User Detail</h3>
-                <div className=' text-white'>
+                <div>
                     <p>Id : {user.id}</p>
                     <p>Name: {user.name}</p>
                     <p>Username: {user.username}</p>
@@ -57,7 +57,13 @@ function Read() {
                     <Link to="/user" className='btn btn-primary'>Back</Link>
                 </div>
             </div>
-            <div className="w-75">
+            <motion.div
+                className='w-75 rounded bg-white border shadow p-4'
+                initial={{ opacity: 0, y: 100 }}
+                animate={{ opacity: 1, y: 0 }}
+                exit={{ opacity: 0, y: -100 }}
+                transition={{ duration: 0.5 }}
+            >
                 <div className='d-flex justify-content-end'>
                     <Link to={`/user/${id}/add-article`} className='btn btn-success'>ADD Article</Link>
                 </div>
@@ -84,7 +90,7 @@ function Read() {
                     ))}
                     </tbody>
                 </table>
-            </div>
+                </motion.div>
         </motion.div>
     );
 }
