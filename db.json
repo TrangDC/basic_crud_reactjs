@@ -5,24 +5,73 @@
       "name": "John Doe",
       "username": "john_doe",
       "email": "john@example.com",
-      "phone": "1234567890",
-      "website": "johndoe.com"
+      "phone": "1234567890"
+    },
+    {
+      "id": "2",
+      "name": "Jane Smith",
+      "username": "jane_smith",
+      "email": "jane@example.com",
+      "phone": "9876543210"
+    },
+    {
+      "id": "3",
+      "name": "Alice Johnson",
+      "username": "alice_johnson",
+      "email": "alice@example.com",
+      "phone": "5551234567"
     },
     {
       "id": "4",
-      "name": "Bob Williams updated",
+      "name": "Bob Williams",
       "username": "bob_williams",
       "email": "bob@example.com",
-      "phone": "5559876543",
-      "website": "bobwilliams.com"
+      "phone": "5559876543"
     },
     {
       "id": "5",
       "name": "Emma Brown",
       "username": "emma_brown",
       "email": "emma@example.com",
-      "phone": "1112223333",
-      "website": "emmabrown.com"
+      "phone": "1112223333"
+    }
+  ],
+  "articles": [
+    {
+      "id": "1",
+      "user_id": 1,
+      "title": "First Article",
+      "content": "Content of the first article."
+    },
+    {
+      "id": "2",
+      "user_id": 1,
+      "title": "Second Article",
+      "content": "Content of the first article."
+    },
+    {
+      "id": "3",
+      "user_id": 2,
+      "title": "Third Article",
+      "content": "Content of the third article."
+    },
+    {
+      "id": "4",
+      "user_id": 3,
+      "title": "Fourth Article",
+      "content": "Content of the fourth article."
+    },
+    {
+      "id": "5",
+      "user_id": 3,
+      "title": "Fifth Article",
+      "content": "Content of the fifth article."
+    },
+    {
+      "id": "6",
+      "user_id": 4,
+      "title": "Sixth Article",
+      "content": "Content of the sixth article."
     }
   ]
 }

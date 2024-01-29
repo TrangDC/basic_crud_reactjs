@@ -74,7 +74,7 @@ function Update() {
                     <br/>
                     <button className='btn btn-info'>Submit</button>
                     <div className='d-flex justify-content-between'>
-                        <Link to='/' className='btn btn-success'>Back</Link>
+                        <Link to='/user' className='btn btn-success'>Back</Link>
                     </div>
                 </form>
             </div>

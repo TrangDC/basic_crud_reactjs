@@ -32,7 +32,7 @@ function Home() {
             <h1>List of Users</h1>
             <div className='w-75 rounded bg-white border shadow p-4'>
                 <div className='d-flex justify-content-end'>
-                    <Link to='/create' className='btn btn-success'>ADD</Link>
+                    <Link to='/user/create' className='btn btn-success'>ADD</Link>
                 </div>
                 <table className='table table-striped'>
                     <thead>
@@ -50,8 +50,8 @@ function Home() {
                                 <td>{user.name}</td>
                                 <td>{user.email}</td>
                                 <td>
-                                    <Link to={`/read/${user.id}`} className='btn btn-sm btn-info me-2'>View</Link>
-                                    <Link to={`/update/${user.id}`} className='btn btn-sm btn-primary me-2'>Edit</Link>
+                                    <Link to={`/user/${user.id}`} className='btn btn-sm btn-info me-2'>View</Link>
+                                    <Link to={`/user/update/${user.id}`} className='btn btn-sm btn-primary me-2'>Edit</Link>
                                     <button className='btn btn-sm btn-danger' onClick={event => handleDelete(user.id)}>Delete</button>
                                 </td>
                             </tr>
