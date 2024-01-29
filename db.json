@@ -1,0 +1,28 @@
+{
+  "users": [
+    {
+      "id": "1",
+      "name": "John Doe",
+      "username": "john_doe",
+      "email": "john@example.com",
+      "phone": "1234567890",
+      "website": "johndoe.com"
+    },
+    {
+      "id": "4",
+      "name": "Bob Williams updated",
+      "username": "bob_williams",
+      "email": "bob@example.com",
+      "phone": "5559876543",
+      "website": "bobwilliams.com"
+    },
+    {
+      "id": "5",
+      "name": "Emma Brown",
+      "username": "emma_brown",
+      "email": "emma@example.com",
+      "phone": "1112223333",
+      "website": "emmabrown.com"
+    }
+  ]
+}
