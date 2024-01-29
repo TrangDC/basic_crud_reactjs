@@ -2,7 +2,7 @@
   "users": [
     {
       "id": "1",
-      "name": "John Doe",
+      "name": "John Doer",
       "username": "john_doe",
       "email": "john@example.com",
       "phone": "1234567890"
@@ -53,16 +53,10 @@
       "id": "1",
       "user_id": 1,
       "title": "First Article",
-      "content": "Content of the first article."
+      "content": "Content of the first article. Đã update"
     },
     {
       "id": "2",
-      "user_id": 1,
-      "title": "Second Article",
-      "content": "Content of the first article."
-    },
-    {
-      "id": "3",
       "user_id": 1,
       "title": "Second Article",
       "content": "Content of the first article."
@@ -100,7 +94,14 @@
     {
       "id": "727a",
       "title": "Blog đầu tiên",
-      "user_id": "1"
+      "user_id": "1",
+      "content": "Đây là nội dung của blog đầu tiên\n"
+    },
+    {
+      "id": "df80",
+      "title": "Blog của tôi",
+      "user_id": "d159",
+      "content": "Xin chào. Tôi mới tạo thử thôi.\n"
     }
   ]
 }

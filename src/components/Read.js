@@ -75,7 +75,7 @@ function Read() {
                             <td>{article.title}</td>
                             <td>
                                 <Link to={`/user/${user.id}/view-article/${article.id}`} className='btn btn-sm btn-info me-2'>View</Link>
-                                <Link to={`/user/update/${user.id}/edit-article/${article.id}`} className='btn btn-sm btn-primary me-2'>Edit</Link>
+                                <Link to={`/user/${user.id}/edit-article/${article.id}`} className='btn btn-sm btn-primary me-2'>Edit</Link>
                                 <button className='btn btn-sm btn-danger' onClick={event => handleDeleteArticle(article.id)}>Delete</button>
                             </td>
                         </tr>
