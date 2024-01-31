@@ -3,6 +3,7 @@ import {Link, useNavigate} from "react-router-dom";
 import { motion } from 'framer-motion';
 import {useFormik} from "formik";
 import axios from "axios";
+import * as Yup from "yup";
 
 function Create() {
 
@@ -16,6 +17,17 @@ function Create() {
             },
             email: ''
         },
+        validationSchema: Yup.object().shape({ // Sử dụng shape() để xác định schema cho đối tượng
+            name: Yup.object().shape({ // Xác định schema cho đối tượng name
+                firstname: Yup.string() // firstname là một chuỗi
+                    .max(20, 'Must be 20 characters or less')
+                    .required('Required'),
+                lastname: Yup.string() // lastname là một chuỗi
+                    .max(20, 'Must be 20 characters or less')
+                    .required('Required'),
+            }),
+            email: Yup.string().email().required()
+        }),
         onSubmit: values => {
             axios.post('http://localhost:3000/users', values)
                 .then(response => {
@@ -48,6 +60,9 @@ function Create() {
                                value={formCreate.values.name.firstname}
                                onChange={formCreate.handleChange}/>
                     </div>
+                    {formCreate.touched.name && formCreate.errors.name && formCreate.errors.name.firstname && (
+                        <div className="text-danger">{formCreate.errors.name.firstname}</div>
+                    )}
                     <div>
                         <label htmlFor="lastname">Last Name:</label>
                         <input type="text"
@@ -56,6 +71,9 @@ function Create() {
                                value={formCreate.values.name.lastname}
                                onChange={formCreate.handleChange}/>
                     </div>
+                    {formCreate.touched.name && formCreate.errors.name && formCreate.errors.name.lastname && (
+                        <div className="text-danger">{formCreate.errors.name.lastname}</div>
+                    )}
                     <div>
                         <label htmlFor="email">Email:</label>
                         <input
@@ -66,6 +84,9 @@ function Create() {
                             onChange={formCreate.handleChange}
                         />
                     </div>
+                    {formCreate.touched.email && formCreate.errors.email ? (
+                        <div className="text-danger">{formCreate.errors.email}</div>
+                    ) : null}
                     <br/>
                     <button type={"submit"} className='btn btn-info'>Submit</button>
                     <div className='d-flex justify-content-between'>

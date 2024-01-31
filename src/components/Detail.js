@@ -18,7 +18,7 @@ function Detail() {
             }
         }
         fetchUser();
-    }, []);
+    }, [id]);
 
     return (
         <Container className="d-flex justify-content-center align-items-center vh-100">
