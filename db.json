@@ -1,0 +1,99 @@
+{
+  "users": [
+    {
+      "id": "1",
+      "name": {
+        "firstname": "John",
+        "lastname": "Doer"
+      },
+      "username": "john_doe",
+      "email": "john@example.com",
+      "phone": "1234567890"
+    },
+    {
+      "id": "2",
+      "name": {
+        "firstname": "Jane",
+        "lastname": "Smith"
+      },
+      "username": "jane_smith",
+      "email": "jane@example.com",
+      "phone": "9876543210"
+    },
+    {
+      "id": "3",
+      "name": {
+        "firstname": "Alice",
+        "lastname": "Johnson"
+      },
+      "username": "alice_johnson",
+      "email": "alice@example.com",
+      "phone": "5551234567"
+    },
+    {
+      "id": "d159",
+      "name": {
+        "firstname": "Đinh Công",
+        "lastname": "Tráng"
+      },
+      "email": "trangdinhcongtmqt@gmail.com",
+      "phone": "0582786384"
+    }
+  ],
+  "articles": [
+    {
+      "id": "1",
+      "user_id": 1,
+      "title": "First Article",
+      "content": "Content of the first article. Đã update"
+    },
+    {
+      "id": "2",
+      "user_id": 1,
+      "title": "Second Article",
+      "content": "Content of the first article."
+    },
+    {
+      "id": "6",
+      "user_id": 2,
+      "title": "Third Article",
+      "content": "Content of the third article."
+    },
+    {
+      "id": "7",
+      "user_id": 3,
+      "title": "Fourth Article",
+      "content": "Content of the fourth article."
+    },
+    {
+      "id": "8",
+      "user_id": 3,
+      "title": "Fifth Article",
+      "content": "Content of the fifth article."
+    },
+    {
+      "id": "9",
+      "user_id": 4,
+      "title": "Sixth Article",
+      "content": "Content of the sixth article."
+    },
+    {
+      "id": "727a",
+      "title": "Blog đầu tiên",
+      "user_id": "1",
+      "content": "Đây là nội dung của blog đầu tiên\n"
+    },
+    {
+      "id": "df80",
+      "title": "Blog của tôi",
+      "user_id": "d159",
+      "content": "Xin chào. Tôi mới tạo thử thôi.\n"
+    },
+    {
+      "id": "3fe3",
+      "title": "Blog thứ hai",
+      "user_id": "1",
+      "content": "Đây là nội dung của blog"
+    }
+  ]
+}
