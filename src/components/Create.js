@@ -1,10 +1,79 @@
 import React from 'react';
+import {Link, useNavigate} from "react-router-dom";
+import { motion } from 'framer-motion';
+import {useFormik} from "formik";
+import axios from "axios";
 
 function Create() {
+
+    const navigate = useNavigate();
+
+    const formCreate = useFormik({
+        initialValues: {
+            name : {
+                firstname: '',
+                lastname: '',
+            },
+            email: ''
+        },
+        onSubmit: values => {
+            axios.post('http://localhost:3000/users', values)
+                .then(response => {
+                    console.log(response)
+                    navigate('/users');
+                })
+                .catch(err => {
+                    console.log(err);
+                })
+        }
+    })
+
+
     return (
-        <div>
-            Create
-        </div>
+        <motion.div
+            className='d-flex w-100 vh-100 justify-content-center align-items-center'
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+            transition={{ duration: 0.5 }}
+        >
+            <div className='w-50 border bg-light text-black p-5'>
+                <form onSubmit={formCreate.handleSubmit}>
+                    <h2>Add a user</h2>
+                    <div>
+                        <label htmlFor="firstname">First Name:</label>
+                        <input type="text"
+                               name='name.firstname'
+                               className='form-control'
+                               value={formCreate.values.name.firstname}
+                               onChange={formCreate.handleChange}/>
+                    </div>
+                    <div>
+                        <label htmlFor="lastname">Last Name:</label>
+                        <input type="text"
+                               name='name.lastname'
+                               className='form-control'
+                               value={formCreate.values.name.lastname}
+                               onChange={formCreate.handleChange}/>
+                    </div>
+                    <div>
+                        <label htmlFor="email">Email:</label>
+                        <input
+                            type="email"
+                            name='email'
+                            className='form-control'
+                            value={formCreate.values.email}
+                            onChange={formCreate.handleChange}
+                        />
+                    </div>
+                    <br/>
+                    <button type={"submit"} className='btn btn-info'>Submit</button>
+                    <div className='d-flex justify-content-between'>
+                        <Link to='/users' className='btn btn-success'>Back</Link>
+                    </div>
+                </form>
+            </div>
+        </motion.div>
     );
 }
 

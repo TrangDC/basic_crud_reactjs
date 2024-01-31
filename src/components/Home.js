@@ -61,7 +61,7 @@ function Home() {
                         users.map((user, index) => (
                             <tr key={index}>
                                 <td>{index + 1}</td>
-                                <td>{user.name.firstname} {user.name.lastname}</td>
+                                <td>{user.name && `${user.name.firstname} ${user.name.lastname}`}</td>
                                 <td>{user.email}</td>
                                 <td>
                                     <Link to={`/users/${user.id}`} className='btn btn-sm btn-info me-2'>View</Link>
