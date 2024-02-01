@@ -13,7 +13,7 @@ function Read() {
                 setUser(res.data);
             })
             .catch(err => console.error(err))
-    }, [])
+    }, [id])
 
 
     return (

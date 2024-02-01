@@ -1,16 +1,16 @@
 {
   "users": [
     {
+      "name": "TDC99",
       "id": "1",
-      "name": "John Doe",
-      "username": "john_doe",
-      "email": "john@example.com",
-      "phone": "1234567890",
-      "website": "johndoe.com"
+      "email": "11175011@st.neu.edu.vn",
+      "phone": "0968949246",
+      "username": "DDC99",
+      "website": "trang.com"
     },
     {
       "id": "4",
-      "name": "Bob Williams updated",
+      "name": "Bob Williams updated 111",
       "username": "bob_williams",
       "email": "bob@example.com",
       "phone": "5559876543",
@@ -23,6 +23,24 @@
       "email": "emma@example.com",
       "phone": "1112223333",
       "website": "emmabrown.com"
+    },
+    {
+      "id": "9de4",
+      "name": "Đinh Công Tráng",
+      "email": "dinhcongtrang99@gmail.com",
+      "phone": "0968949246"
+    },
+    {
+      "id": "cf71",
+      "name": "TDC99",
+      "email": "dinh2@gmail.com",
+      "phone": 968949246
+    },
+    {
+      "id": "f9b0",
+      "name": "Johnson",
+      "email": "11175011@st.neu.edu.vn",
+      "phone": 968949246
     }
   ]
 }
