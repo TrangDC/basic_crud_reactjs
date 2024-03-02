@@ -1,11 +1,12 @@
-import logo from './logo.svg';
+
 import './App.css';
 import PinnedSubheaderList from "./components/PinnedSubheaderList";
+import Transactions from "./components/Transactions";
 
 function App() {
   return (
     <div className="App">
-      <PinnedSubheaderList/>
+      <Transactions/>
     </div>
   );
 }

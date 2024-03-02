@@ -1,25 +1,29 @@
-/* styles.css */
+/* PinnedSubheaderList.css */
 .root {
     display: flex;
-    justify-content: center;
-    align-items: center;
+    justify-content: center; /* Position children with space between */
+    align-items: center; /* Align items vertically */
     height: 100vh;
+    padding: 0 40px; /* Add padding between list and card */
 }
 
 .box {
-    width: 100%;
-    max-width: 360px;
-    background-color: #f0f0f0; /* background color */
-    border: 2px solid #ccc; /* border */
-    border-radius: 8px; /* border radius for rounded corners */
-    overflow: hidden; /* hide the scrollbar */
-    transition: transform 0.3s ease; /* animate the transform property */
+    width: 40%; /* Set the initial width of the box */
+    height: 80vh; /* Set the initial width of the box */
+    max-width: calc(60% - 80px); /* Set the maximum width of the box */
+    background-color: #f0f0f0; /* Background color */
+    border: 2px solid #ccc; /* Border */
+    border-radius: 8px; /* Border radius for rounded corners */
+    overflow: hidden; /* Hide the scrollbar */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Add shadow effect */
+    transition: transform 0.3s ease; /* Animate the transform property */
 }
 
 .list {
     position: relative;
     overflow-y: auto;
-    max-height: 300px;
+    height: 80vh;
+    width: 800px;
 }
 
 .list::-webkit-scrollbar {
@@ -27,9 +31,9 @@
 }
 
 .detail-card {
-    position: fixed;
+    position: absolute;
     top: 0;
-    right: -400px; /* initially off-screen */
+    right: -300px; /* Initially off-screen to the right */
     width: 300px;
     height: 100vh;
     background-color: white;
@@ -39,5 +43,5 @@
 }
 
 .detail-card.active {
-    right: 0; /* slide the card to the right when active */
+    right: 40px; /* Slide the card into view on the right with padding */
 }

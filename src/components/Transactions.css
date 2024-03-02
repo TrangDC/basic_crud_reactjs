@@ -1,0 +1,13 @@
+/*.transactions-container {*/
+/*    display: flex;*/
+/*    justify-content: space-between; !* Phân chia không gian giữa các phần tử *!*/
+/*}*/
+
+/*.outlined-card {*/
+/*    width: 600px; !* Điều chỉnh theo nhu cầu *!*/
+/*}*/
+
+/*!* Điều chỉnh khoảng cách giữa OutlinedCard và PinnedSubheaderList *!*/
+/*.pinned-list {*/
+/*    margin-right: 20px; !* Điều chỉnh theo nhu cầu *!*/
+/*}*/
