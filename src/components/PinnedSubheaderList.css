@@ -13,6 +13,7 @@
     border: 2px solid #ccc; /* border */
     border-radius: 8px; /* border radius for rounded corners */
     overflow: hidden; /* hide the scrollbar */
+    transition: transform 0.3s ease; /* animate the transform property */
 }
 
 .list {
@@ -23,4 +24,20 @@
 
 .list::-webkit-scrollbar {
     display: none; /* hide the scrollbar */
+}
+
+.detail-card {
+    position: fixed;
+    top: 0;
+    right: -400px; /* initially off-screen */
+    width: 300px;
+    height: 100vh;
+    background-color: white;
+    border-left: 1px solid #ccc;
+    padding: 20px;
+    transition: right 0.3s ease; /* animate the right property */
+}
+
+.detail-card.active {
+    right: 0; /* slide the card to the right when active */
 }
