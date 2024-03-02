@@ -38,6 +38,7 @@ function Home() {
                     <thead>
                         <tr>
                             <th>ID</th>
+                            <th>Avatar</th>
                             <th>Name</th>
                             <th>Email</th>
                             <th>Action</th>
@@ -47,6 +48,7 @@ function Home() {
                     {users.map((user, index) =>(
                             <tr key={index}>
                                 <td>{index + 1}</td>
+                                <td>{user.image}</td>
                                 <td>{user.name}</td>
                                 <td>{user.email}</td>
                                 <td>

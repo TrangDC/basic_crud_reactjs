@@ -1,0 +1,27 @@
+/* TransactionList.css */
+.transaction-list {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.transaction-day {
+    border: 1px solid #ccc;
+    margin-bottom: 10px;
+    padding: 10px;
+    width: 100%; /* Ensure each day's box takes full width */
+}
+
+.transaction-day h2 {
+    margin: 0;
+}
+
+.transaction-item {
+    border-top: 1px solid #ccc;
+    padding: 10px;
+}
+
+/* Style for the first transaction item, to remove top border */
+.transaction-item:first-child {
+    border-top: none;
+}
