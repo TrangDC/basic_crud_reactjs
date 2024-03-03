@@ -1,6 +1,6 @@
 import React, {useState} from 'react';
-import PinnedSubheaderList from "./PinnedSubheaderList";
-import OutlinedCard from "./OutlinedCard";
+import PinnedSubheaderList from "./SubHeaderList/PinnedSubheaderList";
+import OutlinedCard from "./OutlinedCard/OutlinedCard";
 
 const Transactions = () => {
     const [selectedTransaction, setSelectedTransaction] = useState(null);
@@ -15,9 +15,7 @@ const Transactions = () => {
 
     return (
         <div>
-            {/* Render PinnedSubheaderList nếu không có selectedTransaction */}
             {!selectedTransaction && <PinnedSubheaderList onTransactionClick={handleTransactionClick} />}
-            {/* Render OutlinedCard và PinnedSubheaderList nếu có selectedTransaction */}
             {selectedTransaction && (
                 <>
                     <PinnedSubheaderList onTransactionClick={handleTransactionClick} />

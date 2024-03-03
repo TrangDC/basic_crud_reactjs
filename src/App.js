@@ -1,6 +1,5 @@
 
 import './App.css';
-import PinnedSubheaderList from "./components/PinnedSubheaderList";
 import Transactions from "./components/Transactions";
 
 function App() {

@@ -1,0 +1,65 @@
+/* PinnedSubheaderList.css */
+.root {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 100vh;
+    padding: 0 30px;
+}
+
+.box {
+    width: 40%;
+    height: 90vh;
+    max-width: calc(60% - 80px);
+    background-color: #f0f0f0;
+    border: 2px solid #ccc;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.list {
+    position: relative;
+    overflow-y: auto;
+    height: 90vh;
+    width: 800px;
+}
+
+.list::-webkit-scrollbar {
+    display: none;
+}
+
+.detail-card {
+    position: absolute;
+    top: 0;
+    right: -700px;
+    width: 600px;
+    height: 100vh;
+    background-color: white;
+    border-left: 1px solid #ccc;
+    padding: 20px;
+    transition: right 0.3s ease;
+}
+
+.detail-card.active {
+    right: 50px;
+}
+
+.subheader-buttons {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+
+.subheader-buttons > div {
+    flex-grow: 1;
+}
+
+.button-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
